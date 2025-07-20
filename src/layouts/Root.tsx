@@ -1,10 +1,11 @@
 import { Outlet } from "react-router";
+import BottomBar from "@/components/BottomBar";
 
 const Root = () => {
   return (
     <main>
-      <h1>root</h1>
       <Outlet />
+      <BottomBar />
     </main>
   );
 };
