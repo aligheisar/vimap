@@ -3,3 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+input,
+textarea {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+}
