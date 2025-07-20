@@ -1,5 +1,12 @@
+import { Outlet } from "react-router";
+
 const Root = () => {
-  return <h1>Root</h1>;
+  return (
+    <main>
+      <h1>root</h1>
+      <Outlet />
+    </main>
+  );
 };
 
 export default Root;
