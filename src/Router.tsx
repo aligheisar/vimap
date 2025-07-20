@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Root from "./Root";
+import Root from "@/layouts/Root";
 
 export const router = createBrowserRouter([
   {
