@@ -1,7 +1,6 @@
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import Root from "@/layouts/Root";
-import ProjectsPage from "@/pages/ProjectsPage";
-import ProjectPage from "@/pages/ProjectPage";
+import AppPage from "@/pages/AppPage";
 import SettingsPage from "@/pages/SettingsPage";
 
 export const router = createHashRouter([
@@ -11,11 +10,7 @@ export const router = createHashRouter([
     children: [
       {
         index: true,
-        Component: ProjectsPage,
-      },
-      {
-        path: "/project/:id",
-        Component: ProjectPage,
+        Component: AppPage,
       },
       {
         path: "/settings",
