@@ -157,25 +157,13 @@ main > :first-child {
   flex-grow: 1;
 }
 
-.bottom-bar {
+.app-container {
   display: flex;
-  justify-content: space-between;
-  border-top: 1px solid var(--border);
-  font-size: var(--font-sm);
-  font-weight: 300;
-  padding: var(--size-1) var(--size-2);
+  flex-direction: column;
+  gap: var(--size-4);
 }
 
-.bottom-bar .command_mode {
-  display: flex;
+.projects-container {
+  display: grid;
   gap: var(--size-2);
-}
-
-.bottom-bar .command_mode input {
-  width: 160px;
-}
-
-.bottom-bar .status-container {
-  display: flex;
-  gap: var(--size-3);
 }
