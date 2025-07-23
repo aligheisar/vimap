@@ -1,5 +1,8 @@
+import { useGlobalStore } from "@/store/global-store";
+
 const ModeIndicator = () => {
-  return <span>-- normal --</span>;
+  const currentMode = useGlobalStore((store) => store.currentMode);
+  return <span>-- {currentMode} --</span>;
 };
 
 export default ModeIndicator;
