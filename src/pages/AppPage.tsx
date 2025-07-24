@@ -6,10 +6,27 @@ const AppPage = () => {
       <h1>projects</h1>
       <div className="projects-container">
         {projects.map((proj) => (
-          <article key={proj.id}>
-            <span>{proj.id}</span>
-            <h3>{proj.name}</h3>
-            <p>{proj.description}</p>
+          <article className="project" data-color={proj.color} key={proj.id}>
+            <div className="group">
+              <span className="id">{proj.id}</span>
+              <h3 className="name">{proj.name}</h3>
+              <p className="description">{proj.description}</p>
+            </div>
+            <div className="group">
+              {proj.tags && proj.tags.length > 0 ? (
+                <div className="tag-container">
+                  {proj.tags.map((tag) => (
+                    <span className="tag"># {tag}</span>
+                  ))}
+                </div>
+              ) : null}
+              <span className="datetime">
+                {new Intl.DateTimeFormat("en-us", {
+                  dateStyle: "long",
+                  timeStyle: "short",
+                }).format(new Date(proj.createdAt))}
+              </span>
+            </div>
           </article>
         ))}
       </div>
