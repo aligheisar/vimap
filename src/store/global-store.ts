@@ -1,5 +1,6 @@
 import { create } from "zustand";
-import { CommandContext, Mode } from "@/types/command";
+import type { CommandContext } from "@/types/command";
+import type { Mode } from "@/types/mode";
 
 type State = {
   focusedPane: CommandContext;
