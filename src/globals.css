@@ -1,5 +1,6 @@
 @import url(styles/reset.css);
 @import url(styles/bottom-bar.css);
+@import url(styles/project.css);
 
 :root {
   --background: #0f1115;
@@ -166,66 +167,4 @@ main > :first-child {
 .projects-container {
   display: grid;
   gap: var(--size-2);
-}
-
-.project {
-  --data-color: attr(data-color type(<color>));
-  --project-primary: var(--data-color, var(--primary));
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-4);
-  padding: var(--size-2) var(--size-3);
-  border-radius: var(--radius-sm);
-  border-style: solid;
-  border-width: 1px;
-  border-color: color-mix(
-    in srgb,
-    var(--border),
-    var(--data-color, var(--border)) 30%
-  );
-  background: color-mix(
-    in srgb,
-    var(--surface),
-    var(--data-color, var(--surface)) 5%
-  );
-}
-
-.project .group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-2);
-}
-
-.project .id {
-  font-size: var(--font-xs);
-  opacity: 0.6;
-}
-
-.project .name {
-  color: var(--project-primary);
-}
-
-.project .description {
-  font-size: var(--font-sm);
-  text-wrap-style: pretty;
-}
-
-.project .tag-container {
-  display: flex;
-  gap: var(--size-1);
-  flex-wrap: wrap;
-}
-
-.project .tag {
-  font-size: var(--font-sm);
-  border-radius: var(--radius-full);
-  background: var(--project-primary);
-  padding: 3px var(--size-2);
-  color: var(--background);
-  box-shadow: var(--shadow-sm);
-}
-
-.project .datetime {
-  font-size: var(--font-sm);
-  opacity: 0.6;
 }
