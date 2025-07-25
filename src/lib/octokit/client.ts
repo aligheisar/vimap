@@ -1,7 +1,10 @@
 import { Octokit } from "@octokit/rest";
+import { GITHUB_TOKEN } from "../../../env";
+
+console.log(GITHUB_TOKEN);
 
 export const app = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
+  auth: GITHUB_TOKEN,
 });
 
 export const getAllRepos = app.paginate(
