@@ -213,6 +213,7 @@ main > :first-child {
 .project .tag-container {
   display: flex;
   gap: var(--size-1);
+  flex-wrap: wrap;
 }
 
 .project .tag {
