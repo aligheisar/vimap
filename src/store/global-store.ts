@@ -5,6 +5,7 @@ import type { Mode } from "@/types/mode";
 type State = {
   focusedPane: CommandContext;
   currentMode: Mode;
+  user: any;
 };
 
 type Action = {
@@ -15,6 +16,7 @@ type Action = {
 export const useGlobalStore = create<State & Action>((set) => ({
   focusedPane: "global",
   currentMode: "normal",
+  user: null,
   setFocusedPane: (focusedPane) => set({ focusedPane }),
   setCurrentMode: (currentMode) => set({ currentMode }),
 }));
