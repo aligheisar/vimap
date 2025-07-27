@@ -1,6 +1,6 @@
 import { Octokit } from "@octokit/rest";
-import { GITHUB_TOKEN } from "../../../env";
 
-export const app = new Octokit({
-  auth: GITHUB_TOKEN,
-});
+export const getClient = (token: string) =>
+  new Octokit({
+    auth: token,
+  });
