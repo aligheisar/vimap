@@ -1,12 +1,5 @@
-import Loading from "@/components/Loading";
-import { useProjects } from "@/queries/projects";
-
 const ProjectsList = () => {
-  const { data: repos, isLoading, isError, error } = useProjects();
-
-  if (isLoading) return <Loading />;
-
-  if (isError) return <p>error accord: {error.message}</p>;
+  const repos: any = [];
 
   return (
     <div className="projects-container">
